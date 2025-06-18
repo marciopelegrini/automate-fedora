@@ -29,9 +29,9 @@ sudo dnf remove fedora-chromium-config -y
 sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y
 
 # Instalar Vivaldi Browser
-sudo dnf config-manager --add-repo https://repo.vivaldi.com/stable/vivaldi.repo
-sudo rpm --import https://repo.vivaldi.com/stable/linux_signing_key.pub
-sudo dnf install vivaldi-stable
+sudo dnf config-manager --add-repo https://repo.vivaldi.com/stable/vivaldi.repo -y
+sudo rpm --import https://repo.vivaldi.com/stable/linux_signing_key.pub -y
+sudo dnf install vivaldi-stable -y
 
 # Instalar aplicativos em flatpak
 flatpak install flathub com.bitwarden.desktop
