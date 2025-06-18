@@ -7,6 +7,10 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 #sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs -y
 #sudo dnf install nvidia-vaapi-driver -y
 
+# Instalar TLP
+sudo dnf install tlp -y
+sudo systemctl enable tlp.service
+
 # Corrigir os problemas de codec
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
